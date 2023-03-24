@@ -13,7 +13,7 @@ public class AddressService {
     @Autowired
     private AddressRepository _addressRepository;
 
-    public Set<Address> findAll(){
-        return (Set<Address>) this._addressRepository;
+    public List<Address> findAll(){
+        return (List<Address>) this._addressRepository.findAll();
     }
 }

@@ -1,6 +1,9 @@
 package com.example.dabrok.entity;
 
 import jakarta.persistence.*;
+
+import java.util.List;
+
 @Entity
 @Table(name = "address")
 public class Address {
@@ -16,6 +19,17 @@ public class Address {
     private Integer postcode;
 
     private String country;
+
+    public Address() {
+    }
+
+    public Address(Integer id, String street, String city, Integer postcode, String country) {
+        this.id = id;
+        this.street = street;
+        this.city = city;
+        this.postcode = postcode;
+        this.country = country;
+    }
 
     public String getStreet() {
         return street;

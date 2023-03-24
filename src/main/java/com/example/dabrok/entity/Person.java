@@ -3,7 +3,9 @@ package com.example.dabrok.entity;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -30,7 +32,7 @@ public class Person {
             joinColumns = @JoinColumn (name = "person_id"),
             inverseJoinColumns = @JoinColumn(name = "adress_id")
     )
-    private Set<Address> adresses = new HashSet<>();
+    private List<Address> adresses;
 
     public Person() {}
     public Person(int id, String name, String lastname, int phoneNumber, String gender) {

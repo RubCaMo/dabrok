@@ -21,7 +21,7 @@ public class AddressController {
     static Logger logger = (Logger) LoggerFactory.getLogger(Logger.class);
 
     @GetMapping("/all")
-    public Set<Address> findAll(){
+    public List<Address> findAll(){
         return addressService.findAll();
     }
 }
