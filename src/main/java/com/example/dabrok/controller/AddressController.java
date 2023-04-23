@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.Set;
 
-@RestController
-@RequestMapping("/address")
+//@RestController
+//@RequestMapping("/address")
 public class AddressController {
     @Autowired
     private AddressService addressService;
